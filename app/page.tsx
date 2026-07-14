@@ -56,8 +56,12 @@ export default function Home() {
       <header className="relative z-20 border-b border-white/10 bg-[#080b0f]/85 backdrop-blur-xl">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
           <a href="#" className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#c59a43]/50 bg-[#c59a43]/10 font-bold text-[#e4bb67]">
-              LS
+            <div className="flex h-12 w-16 items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-black/40 p-1.5">
+              <img
+                src="/lamifor-logo.png"
+                alt="Lamifor Systems Venturi logo"
+                className="h-full w-full object-contain"
+              />
             </div>
 
             <div>
@@ -99,33 +103,26 @@ export default function Home() {
           <div>
             <div className="mb-7 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-xs uppercase tracking-[0.18em] text-white/60">
               <span className="h-2 w-2 rounded-full bg-[#d6a94f]" />
-              Practical tools for real work
+              Designed by engineers. Built for the field.
             </div>
 
             <h1 className="max-w-4xl text-5xl font-semibold leading-[1.04] tracking-[-0.045em] sm:text-6xl lg:text-7xl">
-              Engineering software
-              <span className="block text-[#d7aa51]">that saves time.</span>
+              Practical engineering software
+              <span className="block text-[#d7aa51]">built from real experience.</span>
             </h1>
 
             <p className="mt-8 max-w-2xl text-lg leading-8 text-white/60 sm:text-xl">
-              Lamifor Systems builds focused, dependable software for
-              engineers, technicians, tradespeople, and the people who keep
-              equipment working.
+              Lamifor Systems turns real workplace frustrations into focused,
+              dependable tools for engineers, technicians, mechanics,
+              tradespeople, and the people who keep equipment working.
             </p>
 
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+            <div className="mt-10">
               <a
-                href="#products"
-                className="rounded-md bg-[#d2a44a] px-6 py-3.5 text-center text-sm font-semibold text-black transition hover:bg-[#e4bb67]"
+                href="#thread-id-details"
+                className="inline-flex rounded-md bg-[#d2a44a] px-6 py-3.5 text-center text-sm font-semibold text-black transition hover:bg-[#e4bb67]"
               >
-                View Our Products
-              </a>
-
-              <a
-                href="#mission"
-                className="rounded-md border border-white/15 bg-white/[0.03] px-6 py-3.5 text-center text-sm font-semibold text-white transition hover:bg-white/[0.08]"
-              >
-                Why Lamifor
+                Explore Thread ID
               </a>
             </div>
 
@@ -153,11 +150,11 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative mx-auto w-full max-w-lg">
+          <div className="relative mx-auto w-full max-w-2xl">
             <div className="absolute -inset-10 rounded-full bg-[#c59a43]/10 blur-3xl" />
 
-            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.08] to-white/[0.02] p-6 shadow-2xl shadow-black/60">
-              <div className="mb-6 flex items-center justify-between">
+            <div className="relative rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/[0.08] to-white/[0.02] p-4 shadow-2xl shadow-black/70 sm:p-6">
+              <div className="mb-5 flex items-center justify-between px-1">
                 <div>
                   <p className="text-xs uppercase tracking-[0.2em] text-[#d7aa51]">
                     First Product
@@ -170,32 +167,110 @@ export default function Home() {
                 </span>
               </div>
 
-              <div className="flex min-h-[360px] items-center justify-center rounded-2xl border border-white/10 bg-[#05070a] px-8">
-                <div className="text-center">
-                  <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-3xl border border-[#d7aa51]/40 bg-gradient-to-br from-[#2b3037] to-[#0d1014] text-4xl shadow-xl">
-                    🔩
-                  </div>
-
-                  <p className="mt-7 text-2xl font-semibold">
-                    Identify fasteners with confidence.
-                  </p>
-
-                  <p className="mx-auto mt-4 max-w-sm leading-7 text-white/50">
-                    Guided categories, measurements, thread details, and
-                    intelligent matching in one pocket-sized tool.
-                  </p>
-                </div>
+              <div className="relative mx-auto max-w-[470px] overflow-hidden rounded-[2.6rem] border border-white/15 bg-black shadow-2xl shadow-black">
+                <img
+                  src="/thread-id-app.jpg"
+                  alt="Thread ID fastener identification app"
+                  className="block h-auto w-full"
+                />
+                <div className="pointer-events-none absolute inset-0 rounded-[2.6rem] ring-1 ring-inset ring-white/10" />
               </div>
 
-              <div className="mt-6 grid grid-cols-2 gap-3 text-sm">
+              <div className="mt-6 grid grid-cols-3 gap-3 text-center text-xs sm:text-sm">
                 <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4 text-white/65">
                   Metric + Imperial
                 </div>
                 <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4 text-white/65">
-                  One-time purchase
+                  Guided workflow
+                </div>
+                <div className="rounded-xl border border-white/10 bg-white/[0.03] p-4 text-white/65">
+                  Works offline
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="thread-id-details"
+        className="relative border-y border-white/10 bg-white/[0.025]"
+      >
+        <div className="mx-auto max-w-7xl px-6 py-28 lg:px-8">
+          <div className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#d7aa51]">
+                Why Thread ID?
+              </p>
+              <h2 className="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl">
+                Replace guesswork with a guided answer.
+              </h2>
+            </div>
+
+            <div className="space-y-5 text-lg leading-8 text-white/60">
+              <p>
+                Engineers, mechanics, technicians, and tradespeople lose time
+                identifying unfamiliar fasteners, comparing thread standards,
+                and searching through incomplete references.
+              </p>
+              <p>
+                Thread ID guides the user through fastener type, thread details,
+                and measurements so the most likely match can be identified
+                quickly and confidently.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                icon: "🔩",
+                title: "Identify Fasteners",
+                text: "A focused workflow designed for real shop and field work.",
+              },
+              {
+                icon: "📐",
+                title: "Guided Measurements",
+                text: "Clear metric and imperial measurement steps.",
+              },
+              {
+                icon: "📷",
+                title: "Photo Assisted",
+                text: "Use visual information to help narrow the likely result.",
+              },
+              {
+                icon: "⚡",
+                title: "Works Offline",
+                text: "Useful in workshops, engine rooms, and remote work areas.",
+              },
+            ].map((feature) => (
+              <article
+                key={feature.title}
+                className="rounded-2xl border border-white/10 bg-[#090c10] p-7 transition hover:-translate-y-1 hover:border-[#c59a43]/35"
+              >
+                <div className="text-2xl">{feature.icon}</div>
+                <h3 className="mt-5 text-xl font-semibold">{feature.title}</h3>
+                <p className="mt-3 leading-7 text-white/50">{feature.text}</p>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-12 grid gap-4 border-t border-white/10 pt-8 text-sm text-white/55 sm:grid-cols-3">
+            <p>
+              <span className="font-semibold text-white">Designed by an engineer</span>
+              <br />
+              Built from firsthand industry experience.
+            </p>
+            <p>
+              <span className="font-semibold text-white">Built for practical work</span>
+              <br />
+              For mechanics, technicians, and tradespeople.
+            </p>
+            <p>
+              <span className="font-semibold text-white">No subscription planned</span>
+              <br />
+              A focused tool without unnecessary recurring fees.
+            </p>
           </div>
         </div>
       </section>
@@ -350,6 +425,16 @@ export default function Home() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="relative mx-auto max-w-7xl px-6 py-24 lg:px-8">
+        <div className="overflow-hidden rounded-3xl border border-white/10 bg-black/40 p-6 sm:p-10">
+          <img
+            src="/lamifor-brandmark.jpg"
+            alt="Lamifor Systems full brand mark"
+            className="mx-auto w-full max-w-5xl rounded-2xl object-cover"
+          />
         </div>
       </section>
 
