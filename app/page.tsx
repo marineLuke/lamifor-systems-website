@@ -58,18 +58,24 @@ const articles = [
     description:
       "A story about changing direction, reducing a punishing commute, and turning reclaimed time into something new.",
     category: "Engineering & Life",
+    href: "https://www.linkedin.com/pulse/how-i-got-month-my-life-back-reduced-carbon-footprint-kondratowicz-hhkac",
+    external: true,
   },
   {
     title: "Why Practical Software Still Matters",
     description:
       "Software does not need to be complicated to be valuable. Sometimes the best tools solve one frustrating problem well.",
     category: "Product Philosophy",
+    href: "#articles",
+    external: false,
   },
   {
     title: "Building Thread ID",
     description:
       "The journey from a persistent workplace problem to a working iPhone application.",
     category: "Behind the Build",
+    href: "#articles",
+    external: false,
   },
 ];
 
@@ -457,7 +463,9 @@ export default function Home() {
 
                 <a
                   className="mt-8 inline-block text-sm font-semibold text-white/75"
-                  href="#articles"
+                  href={article.href}
+                  target={article.external ? "_blank" : undefined}
+                  rel={article.external ? "noreferrer" : undefined}
                 >
                   Read article →
                 </a>
