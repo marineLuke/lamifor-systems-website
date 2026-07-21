@@ -1,5 +1,6 @@
 const products = [
   {
+    id: "thread-id",
     name: "Thread ID",
     status: "TestFlight Beta",
     description:
@@ -10,9 +11,30 @@ const products = [
       "Works offline",
       "No subscription",
     ],
-    href: "#thread-id",
+    href: "https://testflight.apple.com/join/rV6gsgqb",
+    cta: "Join the beta",
+    icon: "🔩",
+    external: true,
   },
   {
+    id: "certificate-tracker",
+    name: "Marine Certificate Tracker",
+    status: "Coming Soon",
+    description:
+      "A vessel-focused system for organizing marine certificates, tracking renewal dates, and preparing service records for surveys.",
+    features: [
+      "Company, fleet, and vessel organization",
+      "Expiry dates and renewal reminders",
+      "Certificate and service report storage",
+      "Survey-ready reports and service packs",
+    ],
+    href: "#certificate-tracker",
+    cta: "Coming soon",
+    iconImage: "/certificate-tracker-icon.png",
+    external: false,
+  },
+  {
+    id: "vault",
     name: "Vault",
     status: "In Development",
     description:
@@ -24,6 +46,9 @@ const products = [
       "Built around real workflows",
     ],
     href: "#vault",
+    cta: "Product preview",
+    icon: "🔐",
+    external: false,
   },
 ];
 
@@ -90,10 +115,12 @@ export default function Home() {
           </div>
 
           <a
-            href="#thread-id"
+            href="https://testflight.apple.com/join/rV6gsgqb"
+            target="_blank"
+            rel="noreferrer"
             className="rounded-md border border-[#c59a43]/60 px-4 py-2 text-sm font-medium text-[#e4bb67] transition hover:bg-[#c59a43]/10"
           >
-            Explore Thread ID
+            Join Thread ID Beta
           </a>
         </nav>
       </header>
@@ -119,10 +146,12 @@ export default function Home() {
 
             <div className="mt-10">
               <a
-                href="#thread-id-details"
+                href="https://testflight.apple.com/join/rV6gsgqb"
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex rounded-md bg-[#d2a44a] px-6 py-3.5 text-center text-sm font-semibold text-black transition hover:bg-[#e4bb67]"
               >
-                Explore Thread ID
+                Join the Thread ID Beta
               </a>
             </div>
 
@@ -324,16 +353,24 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-7 lg:grid-cols-2">
-          {products.map((product, index) => (
+        <div className="mt-14 grid gap-7 lg:grid-cols-3">
+          {products.map((product) => (
             <article
-              id={product.name === "Thread ID" ? "thread-id" : "vault"}
+              id={product.id}
               key={product.name}
               className="group rounded-2xl border border-white/10 bg-white/[0.035] p-8 transition hover:-translate-y-1 hover:border-[#c59a43]/40 hover:bg-white/[0.055]"
             >
               <div className="flex items-start justify-between gap-6">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-black/30 text-xl">
-                  {index === 0 ? "🔩" : "🔐"}
+                  {product.iconImage ? (
+                    <img
+                      src={product.iconImage}
+                      alt=""
+                      className="h-full w-full rounded-xl object-cover"
+                    />
+                  ) : (
+                    product.icon
+                  )}
                 </div>
 
                 <span className="rounded-full border border-white/10 px-3 py-1 text-xs text-white/50">
@@ -361,9 +398,11 @@ export default function Home() {
 
               <a
                 href={product.href}
+                target={product.external ? "_blank" : undefined}
+                rel={product.external ? "noreferrer" : undefined}
                 className="mt-9 inline-flex items-center gap-2 text-sm font-semibold text-[#dfb45f]"
               >
-                {index === 0 ? "Explore Thread ID" : "Product preview"}
+                {product.cta}
                 <span className="transition group-hover:translate-x-1">→</span>
               </a>
             </article>
