@@ -13,7 +13,7 @@ const products = [
     ],
     href: "https://testflight.apple.com/join/rV6gsgqb",
     cta: "Join the beta",
-    icon: "🔩",
+    iconImage: "/thread-id-icon.png",
     external: true,
   },
   {
