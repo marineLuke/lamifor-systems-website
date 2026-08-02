@@ -19,7 +19,7 @@ const products = [
   {
     id: "certificate-tracker",
     name: "Marine Certificate Tracker",
-    status: "Coming Soon",
+    status: "Beta",
     description:
       "A vessel-focused system for organizing marine certificates, tracking renewal dates, and preparing service records for surveys.",
     features: [
@@ -28,8 +28,9 @@ const products = [
       "Certificate and service report storage",
       "Survey-ready reports and service packs",
     ],
-    href: "#certificate-tracker",
-    cta: "Coming soon",
+    // TODO: Replace this placeholder with the Marine Certificate Tracker beta URL.
+    href: "#certificate-tracker-beta-url-needed",
+    cta: "Join the beta",
     iconImage: "/certificate-tracker-icon.png",
     external: false,
   },
@@ -328,18 +329,19 @@ export default function Home() {
 
           <div className="space-y-6 text-lg leading-8 text-white/60">
             <p>
-              Skilled professionals lose countless hours searching for
-              information that should be immediately available.
+              Too much time at work is lost searching for information, keeping
+              track of paperwork, and dealing with admin that gets in the way
+              of the actual job.
             </p>
 
             <p>
-              Lamifor Systems exists to turn real workplace frustrations into
-              reliable digital tools—software designed around the way people
-              actually build, repair, maintain, and troubleshoot.
+              Lamifor Systems builds practical tools to make that work a little
+              easier—based on real problems I&apos;ve encountered and designed
+              around how people actually work.
             </p>
 
             <p className="font-medium text-white">
-              Built from industry experience. Refined through real-world use.
+              Built from experience. Made to be useful.
             </p>
           </div>
         </div>
