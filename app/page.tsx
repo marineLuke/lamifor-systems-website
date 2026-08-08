@@ -28,11 +28,10 @@ const products = [
       "Certificate and service report storage",
       "Survey-ready reports and service packs",
     ],
-    // TODO: Replace this placeholder with the Marine Certificate Tracker beta URL.
-    href: "#certificate-tracker-beta-url-needed",
+    href: "https://testflight.apple.com/join/Ste9CEP3",
     cta: "Join the beta",
     iconImage: "/certificate-tracker-icon.png",
-    external: false,
+    external: true,
   },
   {
     id: "vault",
