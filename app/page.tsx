@@ -74,8 +74,8 @@ const articles = [
     description:
       "The journey from a persistent workplace problem to a working iPhone application.",
     category: "Behind the Build",
-    href: "#articles",
-    external: false,
+    href: "https://www.linkedin.com/posts/lamifor-systems_threadid-marineengineering-engineering-activity-7486900854386733056-BiRp?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAgQzYsBpAiLkockLtZd6ept2ufY3pvcSXw",
+    external: true,
   },
 ];
 
