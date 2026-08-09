@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const products = [
   {
     id: "thread-id",
@@ -11,10 +13,10 @@ const products = [
       "Works offline",
       "No subscription",
     ],
-    href: "https://testflight.apple.com/join/rV6gsgqb",
-    cta: "Join the beta",
+    href: "/thread-id",
+    cta: "Explore Thread ID",
     iconImage: "/thread-id-icon.png",
-    external: true,
+    external: false,
   },
   {
     id: "certificate-tracker",
@@ -28,10 +30,10 @@ const products = [
       "Certificate and service report storage",
       "Survey-ready reports and service packs",
     ],
-    href: "https://testflight.apple.com/join/Ste9CEP3",
-    cta: "Join the beta",
+    href: "/certificate-tracker",
+    cta: "Explore Certificate Tracker",
     iconImage: "/certificate-tracker-icon.png",
-    external: true,
+    external: false,
   },
   {
     id: "vault",
@@ -362,10 +364,14 @@ export default function Home() {
 
         <div className="mt-14 grid gap-7 lg:grid-cols-3">
           {products.map((product) => (
-            <article
+            <Link
               id={product.id}
               key={product.name}
-              className="group rounded-2xl border border-white/10 bg-white/[0.035] p-8 transition hover:-translate-y-1 hover:border-[#c59a43]/40 hover:bg-white/[0.055]"
+              href={product.href}
+              target={product.external ? "_blank" : undefined}
+              rel={product.external ? "noreferrer" : undefined}
+              className="group block rounded-2xl border border-white/10 bg-white/[0.035] p-8 transition hover:-translate-y-1 hover:border-[#c59a43]/40 hover:bg-white/[0.055] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d7aa51]"
+              aria-label={`${product.cta}: ${product.description}`}
             >
               <div className="flex items-start justify-between gap-6">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-black/30 text-xl">
@@ -403,16 +409,11 @@ export default function Home() {
                 ))}
               </ul>
 
-              <a
-                href={product.href}
-                target={product.external ? "_blank" : undefined}
-                rel={product.external ? "noreferrer" : undefined}
-                className="mt-9 inline-flex items-center gap-2 text-sm font-semibold text-[#dfb45f]"
-              >
+              <span className="mt-9 inline-flex items-center gap-2 text-sm font-semibold text-[#dfb45f]">
                 {product.cta}
                 <span className="transition group-hover:translate-x-1">→</span>
-              </a>
-            </article>
+              </span>
+            </Link>
           ))}
         </div>
       </section>
