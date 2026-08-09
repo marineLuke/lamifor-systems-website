@@ -276,7 +276,7 @@ export default function Home() {
               {
                 icon: "⚡",
                 title: "Works Offline",
-                text: "Useful in workshops, engine rooms, and remote work areas.",
+                          href="mailto:luke@lamiforsystems.com"
               },
             ].map((feature) => (
               <article
@@ -501,7 +501,7 @@ export default function Home() {
         </p>
 
         <a
-          href="mailto:support@lamiforsystems.com"
+                    href="mailto:luke@lamiforsystems.com"
           className="mt-10 inline-flex rounded-md bg-[#d2a44a] px-7 py-4 text-sm font-semibold text-black transition hover:bg-[#e4bb67]"
         >
           Contact Lamifor Systems
