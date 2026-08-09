@@ -204,8 +204,8 @@ export default function Home() {
 
               <div className="relative mx-auto max-w-[470px] overflow-hidden rounded-[2.6rem] border border-white/15 bg-black shadow-2xl shadow-black">
                 <img
-                  src="/thread-id-app.jpg"
-                  alt="Thread ID fastener identification app"
+                  src="/thread-id-app.png"
+                  alt="Thread ID app showing fastener group selection"
                   className="block h-auto w-full"
                 />
                 <div className="pointer-events-none absolute inset-0 rounded-[2.6rem] ring-1 ring-inset ring-white/10" />
@@ -276,7 +276,7 @@ export default function Home() {
               {
                 icon: "⚡",
                 title: "Works Offline",
-                          href="mailto:luke@lamiforsystems.com"
+                text: "Useful in workshops, engine rooms, and remote work areas.",
               },
             ].map((feature) => (
               <article
@@ -501,7 +501,7 @@ export default function Home() {
         </p>
 
         <a
-                    href="mailto:luke@lamiforsystems.com"
+          href="mailto:luke@lamiforsystems.com"
           className="mt-10 inline-flex rounded-md bg-[#d2a44a] px-7 py-4 text-sm font-semibold text-black transition hover:bg-[#e4bb67]"
         >
           Contact Lamifor Systems
