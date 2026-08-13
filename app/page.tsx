@@ -523,7 +523,7 @@ export default function Home() {
             <a className="hover:text-white" href="#contact">
               Support
             </a>
-            <a className="hover:text-white" href="/thread-id/privacy">
+            <a className="hover:text-white" href="/privacy">
               Privacy
             </a>
           </div>
