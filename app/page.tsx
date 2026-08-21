@@ -4,7 +4,7 @@ const products = [
   {
     id: "thread-id",
     name: "Thread ID",
-    status: "TestFlight Beta",
+    status: "Available on the App Store",
     description:
       "A guided fastener identification tool for engineers, technicians, tradespeople, and anyone who needs the right fastener information quickly.",
     features: [
@@ -123,12 +123,12 @@ export default function Home() {
           </div>
 
           <a
-            href="https://testflight.apple.com/join/rV6gsgqb"
+            href="https://apps.apple.com/ca/app/thread-id/id6789962053"
             target="_blank"
             rel="noreferrer"
             className="rounded-md border border-[#c59a43]/60 px-4 py-2 text-sm font-medium text-[#e4bb67] transition hover:bg-[#c59a43]/10"
           >
-            Join Thread ID Beta
+            Download Thread ID
           </a>
         </nav>
       </header>
@@ -154,12 +154,12 @@ export default function Home() {
 
             <div className="mt-10">
               <a
-                href="https://testflight.apple.com/join/rV6gsgqb"
+                href="https://apps.apple.com/ca/app/thread-id/id6789962053"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex rounded-md bg-[#d2a44a] px-6 py-3.5 text-center text-sm font-semibold text-black transition hover:bg-[#e4bb67]"
               >
-                Join the Thread ID Beta
+                Download on the App Store
               </a>
             </div>
 
@@ -200,7 +200,7 @@ export default function Home() {
                 </div>
 
                 <span className="rounded-full border border-amber-300/20 bg-amber-300/10 px-3 py-1 text-xs text-amber-200">
-                  TestFlight Beta
+                  Available now
                 </span>
               </div>
 
@@ -497,8 +497,8 @@ export default function Home() {
         </h2>
 
         <p className="mx-auto mt-7 max-w-2xl text-lg leading-8 text-white/55">
-          Thread ID is now entering beta testing. Product news, support
-          information, and future releases will be available here.
+          Thread ID is available now on the App Store. Product news, support
+          information, and future releases are available here.
         </p>
 
         <a

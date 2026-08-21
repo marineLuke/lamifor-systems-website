@@ -8,6 +8,9 @@ type ProductPageProps = {
   idea: string;
   icon: string;
   betaHref: string;
+  primaryActionLabel?: string;
+  closingTitle?: string;
+  closingText?: string;
   audience: string[];
   features: { title: string; text: string }[];
   steps: { number: string; title: string; text: string }[];
@@ -48,7 +51,7 @@ export default function ProductPage(props: ProductPageProps) {
           </div>
           <p className="mt-8 max-w-2xl text-xl leading-9 text-white/65">{props.summary}</p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <a href={props.betaHref} target="_blank" rel="noreferrer" className="rounded-md bg-[#d2a44a] px-6 py-3.5 text-sm font-semibold text-black transition hover:bg-[#e4bb67]">Join the beta</a>
+            <a href={props.betaHref} target="_blank" rel="noreferrer" className="rounded-md bg-[#d2a44a] px-6 py-3.5 text-sm font-semibold text-black transition hover:bg-[#e4bb67]">{props.primaryActionLabel ?? "Join the beta"}</a>
             <a href="#how-it-works" className="rounded-md border border-white/15 px-6 py-3.5 text-sm font-semibold text-white/80 transition hover:border-white/30">See how it works</a>
           </div>
         </div>
@@ -94,7 +97,7 @@ export default function ProductPage(props: ProductPageProps) {
         </div>
       </section>
 
-      <section className="relative border-t border-white/10 px-6 py-24 text-center"><h2 className="text-4xl font-semibold">Help shape {props.name}.</h2><p className="mx-auto mt-5 max-w-xl text-lg leading-8 text-white/55">Try the beta in your real workflow and share what would make it more useful.</p><a href={props.betaHref} target="_blank" rel="noreferrer" className="mt-8 inline-flex rounded-md bg-[#d2a44a] px-7 py-4 text-sm font-semibold text-black">Join the beta</a></section>
+      <section className="relative border-t border-white/10 px-6 py-24 text-center"><h2 className="text-4xl font-semibold">{props.closingTitle ?? `Help shape ${props.name}.`}</h2><p className="mx-auto mt-5 max-w-xl text-lg leading-8 text-white/55">{props.closingText ?? "Try the beta in your real workflow and share what would make it more useful."}</p><a href={props.betaHref} target="_blank" rel="noreferrer" className="mt-8 inline-flex rounded-md bg-[#d2a44a] px-7 py-4 text-sm font-semibold text-black">{props.primaryActionLabel ?? "Join the beta"}</a></section>
 
       <footer className="relative border-t border-white/10"><div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-10 text-sm text-white/40 md:flex-row md:items-center md:justify-between lg:px-8"><p>© 2026 Lamifor Systems. All rights reserved.</p><div className="flex gap-6"><Link href="/">Home</Link><Link href="/#products">Products</Link><a href="mailto:luke@lamiforsystems.com">Support</a></div></div></footer>
     </main>
