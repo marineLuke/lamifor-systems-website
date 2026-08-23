@@ -375,15 +375,11 @@ export default function Home() {
             >
               <div className="flex items-start justify-between gap-6">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-black/30 text-xl">
-                  {product.iconImage ? (
-                    <img
-                      src={product.iconImage}
-                      alt=""
-                      className="h-full w-full rounded-xl object-cover"
-                    />
-                  ) : (
-                    product.icon
-                  )}
+                  <img
+                    src={product.iconImage}
+                    alt=""
+                    className="h-full w-full rounded-xl object-cover"
+                  />
                 </div>
 
                 <span className="rounded-full border border-white/10 px-3 py-1 text-xs text-white/50">
