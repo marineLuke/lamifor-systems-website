@@ -36,8 +36,8 @@ const products = [
     external: false,
   },
   {
-    id: "vault",
-    name: "Vault",
+    id: "scarbic",
+    name: "Scarbic",
     status: "In Development",
     description:
       "A secure, offline-first system for organizing critical equipment software, passwords, records, and technical information.",
@@ -47,9 +47,9 @@ const products = [
       "Designed for industrial teams",
       "Built around real workflows",
     ],
-    href: "#vault",
+    href: "#scarbic",
     cta: "Product preview",
-    icon: "🔐",
+    iconImage: "/scarbic-icon-concept-v1.png",
     external: false,
   },
 ];
