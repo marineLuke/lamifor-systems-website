@@ -21,7 +21,7 @@ const products = [
   {
     id: "certificate-tracker",
     name: "Marine Certificate Tracker",
-    status: "Beta",
+    status: "Available on the App Store",
     description:
       "A vessel-focused system for organizing marine certificates, tracking renewal dates, and preparing service records for surveys.",
     features: [
