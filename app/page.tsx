@@ -21,14 +21,14 @@ const products = [
   {
     id: "certificate-tracker",
     name: "Marine Certificate Tracker",
-    status: "Available on the App Store",
+    status: "iOS available · Android open beta",
     description:
-      "A vessel-focused system for organizing marine certificates, tracking renewal dates, and preparing service records for surveys.",
+      "Replace fragile spreadsheets, broken macros, and incomplete records with one simple workflow for marine certificate management.",
     features: [
-      "Company, fleet, and vessel organization",
-      "Expiry dates and renewal reminders",
-      "Certificate and service report storage",
-      "Survey-ready reports and service packs",
+      "Guided, consistent data entry",
+      "Automatic expiry tracking and reminders",
+      "Certificates and service records in one place",
+      "Automated survey-ready service packs",
     ],
     href: "/certificate-tracker",
     cta: "Explore Certificate Tracker",

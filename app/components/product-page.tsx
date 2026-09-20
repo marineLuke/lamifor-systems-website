@@ -7,8 +7,11 @@ type ProductPageProps = {
   summary: string;
   idea: string;
   icon: string;
-  betaHref: string;
+  betaHref?: string;
+  primaryActionHref?: string;
   primaryActionLabel?: string;
+  secondaryActionHref?: string;
+  secondaryActionLabel?: string;
   closingTitle?: string;
   closingText?: string;
   audience: string[];
@@ -20,6 +23,8 @@ type ProductPageProps = {
 };
 
 export default function ProductPage(props: ProductPageProps) {
+  const primaryActionHref = props.primaryActionHref ?? props.betaHref;
+
   return (
     <main className="min-h-screen overflow-hidden bg-[#080b0f] text-white">
       <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(circle_at_20%_5%,rgba(197,151,63,0.13),transparent_30%),radial-gradient(circle_at_85%_18%,rgba(59,130,246,0.10),transparent_28%)]" />
@@ -51,7 +56,8 @@ export default function ProductPage(props: ProductPageProps) {
           </div>
           <p className="mt-8 max-w-2xl text-xl leading-9 text-white/65">{props.summary}</p>
           <div className="mt-10 flex flex-wrap gap-4">
-            <a href={props.betaHref} target="_blank" rel="noreferrer" className="rounded-md bg-[#d2a44a] px-6 py-3.5 text-sm font-semibold text-black transition hover:bg-[#e4bb67]">{props.primaryActionLabel ?? "Join the beta"}</a>
+            {primaryActionHref && <a href={primaryActionHref} target="_blank" rel="noreferrer" className="rounded-md bg-[#d2a44a] px-6 py-3.5 text-sm font-semibold text-black transition hover:bg-[#e4bb67]">{props.primaryActionLabel ?? "Learn more"}</a>}
+            {props.secondaryActionHref && <a href={props.secondaryActionHref} target="_blank" rel="noreferrer" className="rounded-md border border-[#d2a44a]/55 bg-[#d2a44a]/10 px-6 py-3.5 text-sm font-semibold text-[#edc875] transition hover:border-[#d2a44a] hover:bg-[#d2a44a]/15">{props.secondaryActionLabel ?? "Learn more"}</a>}
             <a href="#how-it-works" className="rounded-md border border-white/15 px-6 py-3.5 text-sm font-semibold text-white/80 transition hover:border-white/30">See how it works</a>
           </div>
         </div>
@@ -87,7 +93,7 @@ export default function ProductPage(props: ProductPageProps) {
 
       {props.screenshots && <section className="relative border-y border-white/10 bg-white/[0.025]"><div className="mx-auto max-w-7xl px-6 py-24 lg:px-8"><p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#d7aa51]">Inside the app</p><h2 className="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl">A clear guided workflow.</h2><div className="mt-14 grid gap-6 md:grid-cols-3">{props.screenshots.map((shot) => <div key={shot.src} className="overflow-hidden rounded-[2rem] border border-white/10 bg-black p-2"><img src={shot.src} alt={shot.alt} className="h-auto w-full rounded-[1.6rem]" /></div>)}</div></div></section>}
 
-      {props.reportPreview && <section className="relative border-y border-white/10 bg-white/[0.025]"><div className="mx-auto grid max-w-7xl gap-12 px-6 py-24 lg:grid-cols-[0.7fr_1.3fr] lg:items-center lg:px-8"><div><p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#d7aa51]">Survey ready</p><h2 className="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl">Turn records into a useful report.</h2><p className="mt-6 text-lg leading-8 text-white/55">Organize certificate information once, then prepare a clear vessel report for reviews, renewals, and survey planning.</p></div><div className="overflow-hidden rounded-2xl border border-white/10 bg-white p-3"><img src={props.reportPreview} alt="Preview of a vessel certificate report" className="h-auto w-full" /></div></div></section>}
+      {props.reportPreview && <section className="relative border-y border-white/10 bg-white/[0.025]"><div className="mx-auto grid max-w-7xl gap-12 px-6 py-24 lg:grid-cols-[0.7fr_1.3fr] lg:items-center lg:px-8"><div><p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#d7aa51]">Survey ready</p><h2 className="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl">Stop rebuilding reports by hand.</h2><p className="mt-6 text-lg leading-8 text-white/55">Enter certificate information once. Marine Certificate Tracker keeps it organized and turns the current vessel record into a clear report for renewals, service periods, and surveys.</p></div><div className="overflow-hidden rounded-2xl border border-white/10 bg-white p-3"><img src={props.reportPreview} alt="Preview of a vessel certificate report" className="h-auto w-full" /></div></div></section>}
 
       <section className="relative mx-auto max-w-7xl px-6 py-24 lg:px-8">
         <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#d7aa51]">How-to videos</p>
@@ -97,7 +103,7 @@ export default function ProductPage(props: ProductPageProps) {
         </div>
       </section>
 
-      <section className="relative border-t border-white/10 px-6 py-24 text-center"><h2 className="text-4xl font-semibold">{props.closingTitle ?? `Help shape ${props.name}.`}</h2><p className="mx-auto mt-5 max-w-xl text-lg leading-8 text-white/55">{props.closingText ?? "Try the beta in your real workflow and share what would make it more useful."}</p><a href={props.betaHref} target="_blank" rel="noreferrer" className="mt-8 inline-flex rounded-md bg-[#d2a44a] px-7 py-4 text-sm font-semibold text-black">{props.primaryActionLabel ?? "Join the beta"}</a></section>
+      <section className="relative border-t border-white/10 px-6 py-24 text-center"><h2 className="text-4xl font-semibold">{props.closingTitle ?? `Put ${props.name} to work.`}</h2><p className="mx-auto mt-5 max-w-xl text-lg leading-8 text-white/55">{props.closingText ?? `${props.name} is available now on the App Store.`}</p><div className="mt-8 flex flex-wrap justify-center gap-4">{primaryActionHref && <a href={primaryActionHref} target="_blank" rel="noreferrer" className="inline-flex rounded-md bg-[#d2a44a] px-7 py-4 text-sm font-semibold text-black transition hover:bg-[#e4bb67]">{props.primaryActionLabel ?? "Learn more"}</a>}{props.secondaryActionHref && <a href={props.secondaryActionHref} target="_blank" rel="noreferrer" className="inline-flex rounded-md border border-[#d2a44a]/55 bg-[#d2a44a]/10 px-7 py-4 text-sm font-semibold text-[#edc875] transition hover:border-[#d2a44a] hover:bg-[#d2a44a]/15">{props.secondaryActionLabel ?? "Learn more"}</a>}</div></section>
 
       <footer className="relative border-t border-white/10"><div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-10 text-sm text-white/40 md:flex-row md:items-center md:justify-between lg:px-8"><p>© 2026 Lamifor Systems. All rights reserved.</p><div className="flex gap-6"><Link href="/">Home</Link><Link href="/#products">Products</Link><a href="mailto:luke@lamiforsystems.com">Support</a></div></div></footer>
     </main>
