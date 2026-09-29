@@ -19,6 +19,7 @@ type ProductPageProps = {
   steps: { number: string; title: string; text: string }[];
   screenshots?: { src: string; alt: string }[];
   reportPreview?: string;
+  demoDownloads?: { title: string; text: string; href: string; label: string }[];
   tutorialVideo?: { src: string; poster?: string; title: string; text: string };
   videoGuides: { title: string; text: string }[];
 };
@@ -95,6 +96,8 @@ export default function ProductPage(props: ProductPageProps) {
       {props.screenshots && <section className="relative border-y border-white/10 bg-white/[0.025]"><div className="mx-auto max-w-7xl px-6 py-24 lg:px-8"><p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#d7aa51]">Inside the app</p><h2 className="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl">A clear guided workflow.</h2><div className="mt-14 grid gap-6 md:grid-cols-3">{props.screenshots.map((shot) => <div key={shot.src} className="overflow-hidden rounded-[2rem] border border-white/10 bg-black p-2"><img src={shot.src} alt={shot.alt} className="h-auto w-full rounded-[1.6rem]" /></div>)}</div></div></section>}
 
       {props.reportPreview && <section className="relative border-y border-white/10 bg-white/[0.025]"><div className="mx-auto grid max-w-7xl gap-12 px-6 py-24 lg:grid-cols-[0.7fr_1.3fr] lg:items-center lg:px-8"><div><p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#d7aa51]">Survey ready</p><h2 className="mt-5 text-4xl font-semibold tracking-tight sm:text-5xl">Stop rebuilding reports by hand.</h2><p className="mt-6 text-lg leading-8 text-white/55">Enter certificate information once. Marine Certificate Tracker keeps it organized and turns the current vessel record into a clear report for renewals, service periods, and surveys.</p></div><div className="overflow-hidden rounded-2xl border border-white/10 bg-white p-3"><img src={props.reportPreview} alt="Preview of a vessel certificate report" className="h-auto w-full" /></div></div></section>}
+
+      {props.demoDownloads && <section className="relative mx-auto max-w-7xl px-6 py-24 lg:px-8"><p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#d7aa51]">See the output</p><h2 className="mt-5 max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">A report and service pack, ready to review.</h2><p className="mt-6 max-w-3xl text-lg leading-8 text-white/55">These fictional samples show the files Marine Certificate Tracker can prepare from an organized vessel record. They are for product demonstration only.</p><div className="mt-12 grid gap-6 md:grid-cols-2">{props.demoDownloads.map((item) => <article key={item.href} className="rounded-2xl border border-white/10 bg-white/[0.035] p-7"><h3 className="text-2xl font-semibold">{item.title}</h3><p className="mt-4 leading-7 text-white/55">{item.text}</p><a href={item.href} download className="mt-7 inline-flex rounded-md border border-[#d2a44a]/55 bg-[#d2a44a]/10 px-5 py-3 text-sm font-semibold text-[#edc875] transition hover:border-[#d2a44a] hover:bg-[#d2a44a]/15">{item.label}</a></article>)}</div></section>}
 
       <section className="relative mx-auto max-w-7xl px-6 py-24 lg:px-8">
         <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#d7aa51]">How-to videos</p>

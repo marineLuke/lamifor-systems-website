@@ -41,11 +41,15 @@ export default function CertificateTrackerPage() {
         { number: "03", title: "Generate what you need", text: "Create useful reports and service packs from the same up-to-date information when survey or renewal work begins." },
       ]}
       reportPreview="/certificate-report-preview.png"
+      demoDownloads={[
+        { title: "Fictional service report", text: "A clearly marked sample annual service report, included to demonstrate how supporting documents are stored and shared.", href: "/sample-rescue-boat-service-report.pdf", label: "View sample PDF" },
+        { title: "Structured service pack", text: "A sample ZIP showing the binder, certificate, and attached-report folder structure created for a vessel handover or survey.", href: "/sample-marine-service-pack.zip", label: "Download sample ZIP" },
+      ]}
       tutorialVideo={{
         src: "/marine-certificate-tracker-tutorial.mp4",
         poster: "/certificate-report-preview.png",
         title: "Marine Certificate Tracker: complete tutorial",
-        text: "Learn how to set up your company and vessels, add certificate records, manage reminders, and keep supporting documents organized in one secure workflow.",
+        text: "Learn how to set up your company and vessels, add certificate records, manage reminders, and keep supporting documents organized in one secure workflow. The sample report and service pack above show the resulting handover files.",
       }}
       videoGuides={[
         { title: "Set up a vessel", text: "Create the company, fleet, and vessel structure before adding certificate records." },
