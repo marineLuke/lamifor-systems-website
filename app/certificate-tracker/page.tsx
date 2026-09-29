@@ -41,6 +41,12 @@ export default function CertificateTrackerPage() {
         { number: "03", title: "Generate what you need", text: "Create useful reports and service packs from the same up-to-date information when survey or renewal work begins." },
       ]}
       reportPreview="/certificate-report-preview.png"
+      tutorialVideo={{
+        src: "/marine-certificate-tracker-tutorial.mp4",
+        poster: "/certificate-report-preview.png",
+        title: "Marine Certificate Tracker: complete tutorial",
+        text: "Learn how to set up your company and vessels, add certificate records, manage reminders, and keep supporting documents organized in one secure workflow.",
+      }}
       videoGuides={[
         { title: "Set up a vessel", text: "Create the company, fleet, and vessel structure before adding certificate records." },
         { title: "Add and renew a certificate", text: "Enter dates, attach the certificate, and update the record after renewal." },

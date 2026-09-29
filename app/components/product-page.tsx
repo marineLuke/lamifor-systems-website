@@ -19,6 +19,7 @@ type ProductPageProps = {
   steps: { number: string; title: string; text: string }[];
   screenshots?: { src: string; alt: string }[];
   reportPreview?: string;
+  tutorialVideo?: { src: string; poster?: string; title: string; text: string };
   videoGuides: { title: string; text: string }[];
 };
 
@@ -97,9 +98,28 @@ export default function ProductPage(props: ProductPageProps) {
 
       <section className="relative mx-auto max-w-7xl px-6 py-24 lg:px-8">
         <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#d7aa51]">How-to videos</p>
-        <div className="mt-5 flex flex-col justify-between gap-6 md:flex-row md:items-end"><h2 className="max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">Practical guides, organized by task.</h2><p className="max-w-md text-white/50">Video walkthroughs are being prepared and will live here as each guide is completed.</p></div>
-        <div className="mt-12 grid gap-6 lg:grid-cols-3">
-          {props.videoGuides.map((guide) => <article key={guide.title} className="rounded-2xl border border-dashed border-white/15 bg-white/[0.025] p-7"><span className="text-xs uppercase tracking-[0.18em] text-white/35">Guide planned</span><h3 className="mt-5 text-xl font-semibold">{guide.title}</h3><p className="mt-3 leading-7 text-white/50">{guide.text}</p></article>)}
+        <div className="mt-5 flex flex-col justify-between gap-6 md:flex-row md:items-end"><h2 className="max-w-3xl text-4xl font-semibold tracking-tight sm:text-5xl">Practical guides, organized by task.</h2><p className="max-w-md text-white/50">Follow the complete walkthrough, then use the shorter task guides as quick references.</p></div>
+        {props.tutorialVideo && (
+          <article className="mt-12 overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.035] shadow-2xl shadow-black/50">
+            <video
+              className="aspect-video w-full bg-black object-contain"
+              controls
+              playsInline
+              preload="metadata"
+              poster={props.tutorialVideo.poster}
+            >
+              <source src={props.tutorialVideo.src} type="video/mp4" />
+              Your browser does not support embedded video.
+            </video>
+            <div className="p-7 sm:p-9">
+              <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[#d7aa51]">Complete walkthrough</span>
+              <h3 className="mt-4 text-2xl font-semibold">{props.tutorialVideo.title}</h3>
+              <p className="mt-3 max-w-3xl leading-7 text-white/55">{props.tutorialVideo.text}</p>
+            </div>
+          </article>
+        )}
+        <div className="mt-8 grid gap-6 lg:grid-cols-3">
+          {props.videoGuides.map((guide) => <article key={guide.title} className="rounded-2xl border border-dashed border-white/15 bg-white/[0.025] p-7"><span className="text-xs uppercase tracking-[0.18em] text-white/35">Quick guide planned</span><h3 className="mt-5 text-xl font-semibold">{guide.title}</h3><p className="mt-3 leading-7 text-white/50">{guide.text}</p></article>)}
         </div>
       </section>
 
