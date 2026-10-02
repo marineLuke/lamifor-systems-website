@@ -21,7 +21,7 @@ const products = [
   {
     id: "certificate-tracker",
     name: "Marine Certificate Tracker",
-    status: "iOS available · Android open beta",
+    status: "Available on iOS & Android",
     description:
       "Replace fragile spreadsheets, broken macros, and incomplete records with one simple workflow for marine certificate management.",
     features: [

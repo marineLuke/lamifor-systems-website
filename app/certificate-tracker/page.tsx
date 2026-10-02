@@ -4,7 +4,7 @@ import ProductPage from "../components/product-page";
 export const metadata: Metadata = {
   title: "Marine Certificate Tracker | Lamifor Systems",
   description:
-    "Replace certificate spreadsheets and broken macros with a simple app that automates expiry tracking, reminders, records, and survey-ready service packs.",
+    "Available on iOS and Android. Automate certificate expiry tracking, reminders, records, and survey-ready service packs with Marine Certificate Tracker.",
 };
 
 export default function CertificateTrackerPage() {
@@ -12,14 +12,14 @@ export default function CertificateTrackerPage() {
     <ProductPage
       name="Marine Certificate Tracker"
       eyebrow="Vessel compliance organization"
-      status="iOS available · Android open beta"
+      status="Available on iOS & Android"
       icon="/certificate-tracker-icon.png"
       primaryActionHref="https://apps.apple.com/ca/app/marine-certificate-tracker/id6796863986"
       primaryActionLabel="Download on the App Store"
-      secondaryActionHref="https://play.google.com/apps/testing/com.lamiforsystems.marinecertificatetracker"
-      secondaryActionLabel="Join the Android open beta"
+      secondaryActionHref="https://play.google.com/store/apps/details?id=com.lamiforsystems.marinecertificatetracker"
+      secondaryActionLabel="Get it on Google Play"
       closingTitle="Put Marine Certificate Tracker to work."
-      closingText="Download on iOS today, or join the Android open beta to try Marine Certificate Tracker before its public Google Play release."
+      closingText="Available for iOS on the App Store and Android on Google Play. Download Marine Certificate Tracker and keep your vessel records ready for the next survey."
       summary="Stop managing vessel certificates through fragile spreadsheets, broken macros, and scattered files. Marine Certificate Tracker gives your team one simple workflow and automates the repetitive work around expiry dates, reminders, records, and survey preparation."
       idea="Certificate spreadsheets only work when every macro keeps working and every person enters every detail correctly. One missed field, broken formula, or outdated copy can leave critical information hidden. Marine Certificate Tracker replaces that fragile process with guided data entry, automatic tracking, and a clear record for every vessel."
       audience={[
@@ -42,14 +42,13 @@ export default function CertificateTrackerPage() {
       ]}
       reportPreview="/certificate-report-preview.png"
       demoDownloads={[
-        { title: "Fictional service report", text: "A clearly marked sample annual service report, included to demonstrate how supporting documents are stored and shared.", href: "/sample-rescue-boat-service-report.pdf", label: "View sample PDF" },
-        { title: "Structured service pack", text: "A sample ZIP showing the binder, certificate, and attached-report folder structure created for a vessel handover or survey.", href: "/sample-marine-service-pack.zip", label: "Download sample ZIP" },
+        { title: "App-exported certificate report", text: "A certificate expiration report exported directly from Marine Certificate Tracker, showing a vessel’s certificate name and expiry date.", href: "/marine-certificate-tracker-report.pdf", label: "Download report PDF" },
       ]}
       tutorialVideo={{
         src: "/marine-certificate-tracker-tutorial.mp4",
         poster: "/certificate-report-preview.png",
         title: "Marine Certificate Tracker: complete tutorial",
-        text: "Learn how to set up your company and vessels, add certificate records, manage reminders, and keep supporting documents organized in one secure workflow. The sample report and service pack above show the resulting handover files.",
+        text: "Learn how to set up your company and vessels, add certificate records, manage reminders, and keep supporting documents organized in one secure workflow. Download the app-exported certificate report above to see the report format.",
       }}
       videoGuides={[
         { title: "Set up a vessel", text: "Create the company, fleet, and vessel structure before adding certificate records." },
